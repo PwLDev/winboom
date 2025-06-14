@@ -8,7 +8,7 @@
 
 ## About
 **winboom** is a minimal program written in C++ designed to cause a BSOD by raising an exception in ntdll.dll in Windows.
-It's useful if you want to see your Windows BSOD screen, or just play around with Windows.
+It's useful if you want to see the BSOD screen, or just play around with Windows.
 
 It works in any NT-based system (sorry MS-DOS folks), both physical and virtualised.
 
@@ -17,7 +17,7 @@ It works in any NT-based system (sorry MS-DOS folks), both physical and virtuali
 > Since winboom handles low level stuff, you need to run this program as administrator in order for it to work!
 
 The easy way to use winboom follows like this:
-- Go to the **Releases** of this repo.
+- Go to the **Releases** section of this repo.
 - Download the latest **winboom.exe** provided.
 - Open the file as administrator.
 - Click "Yes" in the winboom box.
@@ -32,7 +32,7 @@ cd build
 cmake ..
 cmake --build . --config Release
 ```
-And that's it, you have your fresh built **winboom.exe** 
+And that's it, you have your freshly built **winboom.exe** 
 
 ## FAQ
 <details>
@@ -42,7 +42,13 @@ It's totally normal because antiviruses are designed to avoid these stuff to hap
 </details>
 
 <details>
-<summary>Is there something for Linux?</summary>
+<summary>Will my PC boot normally after this?</summary>
+
+Yes, it should boot up as usual. Yet there is a little chance that some file may get corrupt, in that case the Windows automatic repair can handle that, but it's pretty unlikely to happen.
+</details>
+
+<details>
+<summary>Is there something for Unix?</summary>
 
 Try running this command: `:(){ :|:& };:`
 </details>
@@ -58,7 +64,6 @@ I was heavily bored at my home and with nothing to do, so I remembered that once
 
 Sure, but I'm not responsible for any damage caused to physical devices. Proceed with caution!
 </details>
-
 
 ## Credits
 Made by [PwLDev](https://github.com/PwLDev).
