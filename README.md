@@ -1,19 +1,20 @@
 # winboom
 💣 Because sometimes, you just need to watch the world BSOD.
 
-<img src=".github/bsod.png" width="400"><br>
+<img src=".github/bsod.png" width="500"><br>
 
 > [!WARNING]
 > BSODs can cause data loss or some files to corrupt, so save everything just in case.
 
 ## About
-**winboom** is a minimal program both written in C++ designed to cause a BSOD by raising an exception in ntdll.dll in Windows.
+**winboom** is a minimal program written in C++ designed to cause a BSOD by raising an exception in ntdll.dll in Windows.
+It's useful if you want to see your Windows BSOD screen, or just play around with Windows.
 
-It works in any NT-based system (sorry MS-DOS folks).
+It works in any NT-based system (sorry MS-DOS folks), both physical and virtualised.
 
 ## How to use
 > [!IMPORTANT]
-> Since this is really low level stuff, you need to run this program as administrator in order for it to work!
+> Since winboom handles low level stuff, you need to run this program as administrator in order for it to work!
 
 The easy way to use winboom follows like this:
 - Go to the **Releases** of this repo.
@@ -21,9 +22,11 @@ The easy way to use winboom follows like this:
 - Open the file as administrator.
 - Click "Yes" in the winboom box.
 
-Now here comes the hard way, if for some reason you want to rebuild this, you can do it.
+Now, here comes the hard way, if for some reason you want to rebuild this, you can do it like this:
+
 ```sh
-cd path\to\winboom
+git clone https://github.com/PwLDev/winboom.git
+cd winboom
 mkdir build
 cd build
 cmake ..
