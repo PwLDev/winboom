@@ -14,12 +14,9 @@ It gives you a dialog box asking if you want to crash your Windows system, if yo
 It works in any NT-based system (sorry MS-DOS folks), both physical and virtualised.
 
 ## How to use
-> [!IMPORTANT]
-> Since winboom handles low level stuff, you need to run this program as administrator in order for it to work!
-
 The easy way to use winboom follows like this:
 - Go to the **Releases** section of this repo.
-- Download the latest **winboom.exe** provided.
+- Download the executable for your architecture.
 - Open the file as administrator.
 - Click "Yes" in the winboom box.
 
@@ -33,13 +30,13 @@ cd build
 cmake ..
 cmake --build . --config Release
 ```
-And that's it, you have your freshly built **winboom.exe** 
+And that's it, you have your freshly built **winboom** executables.
 
 ## FAQ
 <details>
 <summary>My antivirus flagged this as dangerous, what can I do?</summary>
 
-It's totally normal because antiviruses are designed to avoid these stuff to happen, but you can temporarily disable it if you really want to run winboom.exe.
+It's totally normal because antiviruses are designed to avoid these stuff to happen, but you can temporarily disable it if you really want to run winboom.
 </details>
 
 <details>
@@ -57,7 +54,7 @@ Try running this command: `:(){ :|:& };:`
 <details>
 <summary>Why did you make this?</summary>
 
-I was heavily bored at my home and with nothing to do, so I remembered that once, a long time ago, I wrote a russian roulette code in Python to BSOD Windows, so I reused that code and translated it to C++.
+I was heavily bored at my home and with nothing to do, so I remembered that once, a long time ago, I wrote a russian roulette code in Python to BSOD-crash Windows, so I reused that code and translated it to C++.
 </details>
 
 <details>

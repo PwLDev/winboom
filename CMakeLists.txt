@@ -10,4 +10,3 @@ set(CMAKE_CXX_COMPILER x86_64-w64-mingw32-g++)
 
 add_executable(winboom src/winboom.cpp)
 target_link_libraries(winboom ntdll)
-target_link_libraries(winboom shell32)

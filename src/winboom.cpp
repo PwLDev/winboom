@@ -17,36 +17,7 @@ typedef NTSTATUS(NTAPI* NtRaiseHardError_t)(
     PULONG Response
 );
 
-typedef BOOL(WINAPI* IsUserAnAdmin_t)(void);
-
-bool isUserAdmin() {
-    HMODULE shell32 = LoadLibraryA("shell32.dll");
-    if (!shell32) {
-        std::cerr << "Failed to load shell32.dll" << std::endl;
-        return false;
-    }
-
-    auto IsUserAnAdmin = (IsUserAnAdmin_t)GetProcAddress(shell32, "IsUserAnAdmin");
-    if (!IsUserAnAdmin) {
-        std::cerr << "Failed to resolve IsUserAnAdmin function." << std::endl;
-        FreeLibrary(shell32);
-        return false;
-    }
-
-    BOOL result = IsUserAnAdmin();
-    FreeLibrary(shell32);
-    return result != FALSE;
-}
-
 int main() {
-    bool isAdmin = isUserAdmin();
-    if (!isAdmin) {
-        int box = MessageBoxA(
-            NULL, "You need to run winboom as an administrator.", "winboom", MB_OK | MB_ICONWARNING
-        );
-        return 0;
-    }
-
     int result = MessageBoxA(
         NULL, "Do you want to crash your PC?", "winboom", MB_YESNO | MB_ICONINFORMATION
     );
@@ -68,7 +39,7 @@ int main() {
         }
 
         BOOLEAN oldValue;
-        NTSTATUS privilegeStatus = RtlAdjustPrivilege(
+        NTSTATUS status = RtlAdjustPrivilege(
             19,
             TRUE,
             FALSE,
@@ -76,13 +47,13 @@ int main() {
         );
     
         if (privilegeStatus != 0) {
-            std::cerr << "RtlAdjustPrivilege failed: " << std::hex << privilegeStatus << std::endl;
+            std::cerr << "RtlAdjustPrivilege failed: " << std::hex << status << std::endl;
             return 1;
         }
 
         ULONG response;
-        NTSTATUS status = NtRaiseHardError(
-            0xC000007B,
+        status = NtRaiseHardError(
+            0xC0000022,
             0,
             0,
             nullptr,
