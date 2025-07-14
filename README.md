@@ -7,17 +7,17 @@
 > It's not a joke, it truly causes a system crash. BSODs can cause data loss or some files to corrupt, so save everything just in case.
 
 ## About
-**winboom** is a tiny, totally unnecessary but undeniably fun program written in C++ designed to porposefully cause a BSOD by raising an exception in ntdll.dll in Windows.
+**winboom** is a tiny, totally unnecessary but undeniably fun program written in C++ designed to purposefully cause a BSOD by raising an exception in ntdll.dll in Windows.
 
 It gives you a dialog box asking if you want to crash your Windows system, if you click "yes", say goodbye to your Windows. Instant BSOD guaranteed!
 
-It works in any NT-based system (sorry MS-DOS folks), both physical and virtualised.
+It works in any NT-based system (sorry DOS folks), both physical and virtualised.
 
 ## How to use
 The easy way to use winboom follows like this:
 - Go to the **Releases** section of this repo.
 - Download the executable for your architecture.
-- Open the file as administrator.
+- Run the executable.
 - Click "Yes" in the winboom box.
 
 Now, here comes the hard way, if for some reason you want to rebuild this, you can do it like this:
