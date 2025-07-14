@@ -46,7 +46,7 @@ int main() {
             &oldValue
         );
     
-        if (privilegeStatus != 0) {
+        if (status != 0) {
             std::cerr << "RtlAdjustPrivilege failed: " << std::hex << status << std::endl;
             return 1;
         }

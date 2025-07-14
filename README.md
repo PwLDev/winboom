@@ -25,12 +25,10 @@ Now, here comes the hard way, if for some reason you want to rebuild this, you c
 ```sh
 git clone https://github.com/PwLDev/winboom.git
 cd winboom
-mkdir build
-cd build
-cmake ..
-cmake --build . --config Release
+sh ./scripts/build.sh
 ```
-And that's it, you have your freshly built **winboom** executables.
+
+And that's it, you have your freshly built **winboom** executables, because yes, I had the great idea to make a program for Windows, in Linux.
 
 ## FAQ
 <details>
